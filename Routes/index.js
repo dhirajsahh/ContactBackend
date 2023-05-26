@@ -1,0 +1,12 @@
+const router = require("express").Router();
+const allContact = require("./allContact");
+const updateContact = require("./updateContact");
+const deleteContact = require("./deleteContact");
+const particularContact = require("./particularContact");
+const createContact = require("./createContact");
+router.use("/contacts", allContact);
+router.use("/contacts", createContact);
+router.use("/contacts", updateContact);
+router.use("/contacts", particularContact);
+router.use("/contacts", deleteContact);
+module.exports = router;
